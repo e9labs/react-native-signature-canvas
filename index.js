@@ -37,7 +37,10 @@ class SignatureView extends Component {
     this.state = { base64DataUrl: props.dataURL || null };
     const { backgroundColor } = StyleSheet.flatten(props.style);
     const injectedJavaScript = injectedSignaturePad + injectedApplication;
-    const html = htmlContent(injectedJavaScript);
+    var html = htmlContent(injectedJavaScript);
+    html = html.replace("<%Confirm%>", props.confirmTxt);
+    html = html.replace("<%Reset%>", props.resetTxt);
+    html = html.replace("<%SignAbove%>", props.signAbove)
     this.source = { html };
   }
 

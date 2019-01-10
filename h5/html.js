@@ -171,9 +171,9 @@ const content = script =>
       <canvas></canvas>
     </div>
     <div class="m-signature-pad--footer">
-      <div class="description">Sign above</div>
-      <button type="button" class="button clear" data-action="clear">清空</button>
-      <button type="button" class="button save" data-action="save">保存</button>
+    <div class="description"><%SignAbove%></div>
+    <button type="button" class="button clear" data-action="clear"><%Reset%></button>
+    <button type="button" class="button save" data-action="save"><%Confirm%></button>
     </div>
   </div>
 
